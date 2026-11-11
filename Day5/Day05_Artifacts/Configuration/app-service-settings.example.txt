@@ -1,0 +1,11 @@
+# Configure these as App Service application settings (not as a connection string).
+# Use the actual Storage Account name created by the participant.
+QueueStorage__ServiceUri=https://<STORAGE_ACCOUNT_NAME>.queue.core.windows.net
+QueueStorage__QueueName=orders
+APP_ENVIRONMENT=PRODUCTION
+
+# For the staging slot, use the same queue settings and set:
+APP_ENVIRONMENT=STAGING
+
+# Enable the system-assigned managed identity separately on BOTH production
+# and staging slots. Assign Storage Queue Data Message Sender to each identity.

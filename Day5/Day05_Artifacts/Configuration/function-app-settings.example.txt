@@ -1,0 +1,14 @@
+# Function App application settings for standard Azure public-cloud storage DNS.
+# Replace <STORAGE_ACCOUNT_NAME> with the participant's Storage Account name.
+AzureWebJobsStorage__accountName=<STORAGE_ACCOUNT_NAME>
+AzureWebJobsStorage__credential=managedidentity
+
+# Queue trigger connection prefix matches Connection = "OrdersQueue".
+OrdersQueue__queueServiceUri=https://<STORAGE_ACCOUNT_NAME>.queue.core.windows.net
+OrdersQueue__credential=managedidentity
+
+FUNCTIONS_WORKER_RUNTIME=dotnet-isolated
+FUNCTIONS_EXTENSION_VERSION=~4
+
+# Do not configure a storage account key or connection string for the cloud setup.
+# Flex Consumption supports managed identity for AzureWebJobsStorage.

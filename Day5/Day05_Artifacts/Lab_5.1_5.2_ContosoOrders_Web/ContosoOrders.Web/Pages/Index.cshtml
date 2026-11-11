@@ -1,0 +1,10 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Contoso Orders";
+}
+<div class="text-center">
+    <h1 class="display-4">Contoso Orders</h1>
+    <p>Submit customer orders and send them to Azure Queue Storage.</p>
+    <p><a class="btn btn-primary" asp-page="/SubmitOrder">Submit an order</a></p>
+</div>
